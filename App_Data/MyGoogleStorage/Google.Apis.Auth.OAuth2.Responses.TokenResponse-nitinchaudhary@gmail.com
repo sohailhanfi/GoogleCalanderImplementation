@@ -1,1 +1,0 @@
-{"access_token":"ya29.a0ARrdaM_5Vtx4GM7IaU9S_HiAEsy-Ot0YUJbMHkQaU1roc0BlhqiGEw1MqeId5OaVna0-1OssiQp19fzmUF3luK5AYe5WpuwMbut533xllOQC3j4SXI7SKiAPcKC9DrYOgPabXQuxhPoNRADO6kjfggbqVHtqhA","token_type":"Bearer","expires_in":3509,"scope":"https://www.googleapis.com/auth/calendar","Issued":"2022-06-22T12:20:56.639+05:00","IssuedUtc":"2022-06-22T07:20:56.639Z"}
