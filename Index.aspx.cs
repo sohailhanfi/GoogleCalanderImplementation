@@ -20,15 +20,10 @@ namespace ToolsApp
     {
         CalendarService calService;
 
-        //     private const string calID = "nitinchaudhary@gmail.com";
-        //private const string UserId = "nitinchaudhary@gmail.com";
-        // private const string calID = "waqas.riaz1500@gmail.com";
-        //private const string UserId = "waqas.riaz1500@gmail.com";
-        //   private const string calID = "sohailahmedhanfi@gmail.com";
-        // private const string UserId = "sohailahmedhanfi@gmail.com";
+   
 
-        private const string calID = "sohailahmed.se@iba-suk.edu.pk";
-        private const string UserId = "sohailahmed.se@iba-suk.edu.pk";
+        private const string calID = "You@email.com";
+        private const string UserId = "You@email.com";
 
         private static string gFolder = System.Web.HttpContext.Current.Server.MapPath("/App_Data/MyGoogleStorage");
         protected void Page_Load(object sender, EventArgs e)
@@ -53,10 +48,7 @@ namespace ToolsApp
 
             var uri = Request.Url.ToString();
             var code = Request["code"];
-            //Accesstoken:  ya29.a0ARrdaM864i5g04to_ah2geke8g4ncnw13zZLogpjtgZSBVbYNwgG_aZFCG9R8_LPyD8QyfX6bMtcNsqcHak8VFeiqE6PLHQC4rOdCy5E1F085XuWWQ0skWOVS4CacnPa4MLF70PzLiyKfqUErFVRiArUKCTx
-            //Refresh: 1//04AlPsYssFstDCgYIARAAGAQSNwF-L9IrJ1T_a6EymOgzwzM97CoXugktTHDGTYaFs4ULtkGZOEY22sDx4gEHCqQ49fkL5zG0h3k
-           
-            
+         
             if (code != null)
             {
                 var token = flow.ExchangeCodeForTokenAsync(UserId, code,
@@ -71,12 +63,8 @@ namespace ToolsApp
             {
                 var result = new AuthorizationCodeWebApp(flow, uri, uri).AuthorizeAsync(UserId,
                     CancellationToken.None).Result;
-               // result.Credential.Token.RefreshToken = "1//04AlPsYssFstDCgYIARAAGAQSNwF-L9IrJ1T_a6EymOgzwzM97CoXugktTHDGTYaFs4ULtkGZOEY22sDx4gEHCqQ49fkL5zG0h3k";
-               // result.Credential.Token.AccessToken = "ya29.a0ARrdaM864i5g04to_ah2geke8g4ncnw13zZLogpjtgZSBVbYNwgG_aZFCG9R8_LPyD8QyfX6bMtcNsqcHak8VFeiqE6PLHQC4rOdCy5E1F085XuWWQ0skWOVS4CacnPa4MLF70PzLiyKfqUErFVRiArUKCTx";
-
-                //var refreshResult = result.Credential.RefreshTokenAsync(CancellationToken.None).Result;
-                
-
+         
+           
                 if (result.RedirectUri != null)
                 {
                     // Redirect the user to the authorization server.
