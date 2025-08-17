@@ -1,17 +1,13 @@
-# Force .cs files to be counted as C#
-*.cs linguist-language=C#
+# Force everything to be counted as C#
+* linguist-language=C#
 
-# Treat common .NET config files as C#
-*.csproj linguist-language=C#
-*.sln linguist-language=C#
-*.config linguist-language=C#
-
-# Ignore auto-generated / irrelevant files from language stats
+# Exclude common irrelevant/generated files
 *.min.js linguist-vendored
 *.css linguist-vendored
 *.html linguist-vendored
 *.json linguist-vendored
 *.xml linguist-vendored
+*.md linguist-vendored
 wwwroot/* linguist-vendored
 node_modules/* linguist-vendored
 bin/* linguist-vendored
